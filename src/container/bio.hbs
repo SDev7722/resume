@@ -2,7 +2,212 @@
 в якому міститься код, котрий буде віддаватися по  шляху (PATH) - "/summary" }}
 
 <div>
-  In progress
+
+  <br />
+  <hr />
+  <br />
+
+  <h1><em>{{name}}</em></h1>
+
+  <br />
+
+  <p>Birthdate: <time>{{birthdate}}</time></p>
+  <p>Birthplace: <q>{{birthplace}}</q></p>
+  <p>Deathdate: <time>{{deathdate}}</time></p>
+  <p>Deathplace: <q>{{deathplace}}</q></p>
+  <p>Nationality: <q>{{nationality}}</q></p>
+  <p>Occupation: <q>{{occupation}}</q></p>
+
+  <br />
+
+  <ul>
+    {{#each known_for}}
+      <div>
+        <li>
+          <p><q>{{this}}</q></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each education}}
+      <div>
+        <li>
+          <p>Degree: <em>{{degree}}</em></p>
+        </li>
+        <li>
+          <p>Field: <em>{{field}}</em></p>
+        </li>
+        <li>
+          <p>Institution: <q>{{institution}}</q></p>
+        </li>
+        <li>
+          <p>Year: <time>{{year}}</time></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each notable_publications}}
+      <div>
+
+        <br />
+
+        <li>
+          <h2><em>{{title}}</em></h2>
+        </li>
+
+        <br />
+
+        <li>
+          <p>Year: <time>{{year}}</time></p>
+        </li>
+        <li>
+          <p>Pyblisher: <q>{{publisher}}</q></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each partners}}
+      <div>
+        <li>
+          <p>Name: {{name}}</p>
+        </li>
+        <li>
+          <p>Relationship: <q>{{relationship}}</q></p>
+        </li>
+        <li>
+          <p>Years: <time>{{years}}</time></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each awards}}
+      <div>
+
+        <br />
+
+        <li>
+          <h3><em>{{title}}</em></h3>
+        </li>
+
+        <br />
+
+        <li>
+          <p>Year: <time>{{year}}</time></p>
+        </li>
+        <li>
+          <p>Description: <q>{{description}}</q></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each influences}}
+      <div>
+        <li>
+          <p>{{this}}</p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each influenced}}
+      <div>
+        <li>
+          <p>{{this}}</p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each quotes}}
+      <div>
+        <li>
+          <p><q>{{this}}</q></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#each major_discoveries}}
+      <div>
+
+        <br />
+
+        <li>
+          <h4><em>{{title}}</em></h4>
+        </li>
+
+        <br />
+
+        <li>
+          <p>Year: <time>{{year}}</time></p>
+        </li>
+        <li>
+          <p>Description: <q>{{description}}</q></p>
+        </li>
+      </div>
+    {{/each}}
+  </ul>
+
+  <br />
+
+  <ul>
+    {{#with contributions}}
+      <div>
+
+        <br />
+
+        <li>
+          <h5><em>{{title}}</em></h5>
+        </li>
+
+        <br />
+
+        <li>
+          <p>Description: <q>{{description}}</q></p>
+        </li>
+        <li>
+          <p>Year: <time>{{year}}</time></p>
+        </li>
+        <li>
+          <p>Field: <q>{{field}}</q></p>
+        </li>
+      </div>
+    {{/with}}
+  </ul>
+
+  <br />
+  <hr />
+  <br />
+
 </div>
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 
