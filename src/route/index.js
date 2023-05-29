@@ -63,15 +63,15 @@ router.get('/summary', function (req, res) {
       summary: {
         title: 'Summary',
         text: `Open-minded for new technologies, with 1 years of experience in development. Whenever I start to
-        work on a new project I learn the domain and try to understand the idea of the project. Good team
-        player, every colleague is a friend to me.`,
+				work on a new project I learn the domain and try to understand the idea of the project. Good team
+				player, every colleague is a friend to me.`,
       },
 
       experience: {
         title: 'Other experience',
         text: `Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
-          tournament position, goals etc), analyzing by simple mathematics models and preparing probability
-          for such events like: money line - first win / draw / second win, totals etc.`,
+					tournament position, goals etc), analyzing by simple mathematics models and preparing probability
+					for such events like: money line - first win / draw / second win, totals etc.`,
       },
     },
 
