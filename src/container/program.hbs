@@ -19,13 +19,135 @@
 
         {{#with location}}
           <div>
-            <p>City: {{city}}</p>
-            <p>Country: {{country}}</p>
+            <p>City: <address>{{city}}</address></p>
+            <p>Country: <address>{{country}}</address></p>
           </div>
         {{/with}}
+
+        <br />
+
+        <p>Date: <time>{{date}}</time></p>
+
+        <br />
+
+        <ul>
+          {{#each program}}
+            <div>
+              <li>
+                <p>Name: <em>{{name}}</em></p>
+              </li>
+              <li>
+                <p>Type: <em>{{type}}</em></p>
+              </li>
+              <li>
+                <p>Duration: {{duration}}</p>
+              </li>
+            </div>
+
+            <br />
+
+            {{#with details}}
+              {{#with museum}}
+                <div>
+                  <p>Name: <em>{{name}}</em></p>
+                </div>
+
+                <br />
+
+                {{#with location}}
+                  <div>
+                    <p>Address:
+                      <address>{{address}}</address></p>
+                    <p>City: <address>{{city}}</address></p>
+                    <p>Country:
+                      <address>{{country}}</address></p>
+                  </div>
+                {{/with}}
+
+                <br />
+
+                <ul>
+                  {{#each exhibits}}
+                    <div>
+                      <li>
+                        <p>Name: <em>{{name}}</em></p>
+                      </li>
+                      <li>
+                        <p>Artist: <em>{{artist}}</em></p>
+                      </li>
+                      <li>
+                        <p>Description:
+                          <q>{{description}}</q></p>
+                      </li>
+                      <li>
+                        <p>Audio guide: {{audio_guide}}</p>
+                      </li>
+                    </div>
+                  {{/each}}
+                </ul>
+
+                <br />
+
+              {{/with}}
+
+              <br />
+
+              {{#with venue}}
+                <div>
+                  <p>Name: <em>{{name}}</em></p>
+
+                  <br />
+                  {{#with location}}
+                    <div>
+                      <p>Address:
+                        <address>{{address}}</address></p>
+                      <p>City:
+                        <address>{{city}}</address></p>
+                      <p>Country:
+                        <address>{{country}}</address></p>
+                    </div>
+                  {{/with}}
+                </div>
+              {{/with}}
+
+              <br />
+
+              <ul>
+                {{#each performers}}
+                  <div>
+                    <li>
+                      <p>Name: <q>{{name}}</q></p>
+                    </li>
+                    <li>
+                      <p>Type: <q>{{type}}</q></p>
+                    </li>
+                  </div>
+                {{/each}}
+              </ul>
+
+              <br />
+
+              {{#with guide}}
+                <div>
+                  <p>Name: {{name}}</p>
+                  <p>Language: <em>{{language}}</em></p>
+                  <p>Rating: {{rating}}</p>
+                </div>
+              {{/with}}
+
+              <br />
+
+            {{/with}}
+          {{/each}}
+        </ul>
       </div>
     {{/with}}
   {{/with}}
+
+  <br />
+  <hr />
+  <br />
+
 </div>
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 
