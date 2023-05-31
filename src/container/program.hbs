@@ -72,9 +72,11 @@
                       <li>
                         <p>Name: <em>{{name}}</em></p>
                       </li>
-                      <li>
-                        <p>Artist: <em>{{artist}}</em></p>
-                      </li>
+                      {{#if artist includeZero=null}}
+                        <li>
+                          <p>Artist: <em>{{artist}}</em></p>
+                        </li>
+                      {{/if}}
                       <li>
                         <p>Description:
                           <q>{{description}}</q></p>
