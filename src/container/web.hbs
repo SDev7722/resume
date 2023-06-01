@@ -1,117 +1,59 @@
 {{! Це код container файлу для summary сторінки, 
 в якому міститься код, котрий буде віддаватися по  шляху (PATH) - "/summary" }}
 
-<div>
-
-  <br />
-  <hr />
-  <br />
-
-  {{#with web}}
-    <div>
-      <ul>
+	{{#with web}}
         {{#each languages}}
-          <div>
+        <ul>
+            <li>Name: {{name}}</li>
+            <li>Version: <em>{{version}}</em></li>
+            <li>Description: <blockquote>{{description}}</blockquote></li>
 
             <br />
-
-            <li>
-              <h1>{{name}}</h1>
-            </li>
-
-            <br />
-
-            <li>
-              <p>Version: <em>{{version}}</em></p>
-            </li>
-            <li>
-              <p>Description:
-                <blockquote>{{description}}</blockquote></p>
-            </li>
-          </div>
-
-          <br />
-
-          <ul>
+            <hr>
             {{#if elements}}<h4>Elements:</h4>{{/if}}
             {{#each elements}}
-              <div>
-                <li>
-                  <p>Name: {{name}}</p>
-                </li>
-                <li>
-                  <p>Description:
-                    <blockquote
-                    >{{description}}</blockquote></p>
-                </li>
+                <li>Name: {{name}}</p></li>
+                <li>Description:<blockquote>{{description}}</blockquote></li>
                 <ul>
                   {{#each attributes}}
-                    <div>
-                      <li>
-                        <p>Name: {{name}}</p>
-                      </li>
-                      <li>Description: <blockquote>description</blockquote></li>
-                    </div>
+                      <li>Name: {{name}}</li>
+                      <li>Description: <blockquote>{{description}}</blockquote></li>
                   {{/each}}
                 </ul>
               </div>
             {{/each}}
           </ul>
 
-          <ul>
             {{#if properties}}<h4>Properties:</h4>{{/if}}
             {{#each properties}}
-              <li>
-                <p>Name: {{name}}</p>
-              </li>
-              <li>
-                <p>Description: <blockquote>{{description}}</blockquote></p>
-              </li>
-                <ul>
-                  {{#each values}}
-                    <li>
-                      <p>Value: {{value}}</p>
-                    </li>
-                    <li>
-                      <p>Description: <blockuote>{{description}}</blockuote></p>
-                    </li>
-                  {{/each}}
-                </ul>
-              {{/each}}
-          </ul>
+				<li>Name: {{name}}</li>
+				<li>Description: <blockquote>{{description}}</blockquote></li>
+				<ul>
+					{{#each values}}
+						<li>Value: {{value}}</li>
+						<li>Description: <blockuote>{{description}}</blockuote></li>
+					{{/each}}
+					</ul>
+            {{/each}}
 
-          <ul>
             {{#if functions}}<h4>Functions:</h4>{{/if}}
             {{#each functions}}
-              <li>
-                <p>Name: {{name}}</p>
-              </li>
-              <li>
-                <p>Description: <blockquote>{{description}}</blockquote></p>
-              </li>
-              <ul>
-                  {{#each parameters}}
-                    <li>
-                      <p>Name: {{name}}</p>
-                    </li>
-                    <li>
-                      <p>Type: {{type}}</p>
-                    </li>
-                    <li>
-                      <p>Description: <blockquote>{{description}}</blockquote></p>
-                    </li>
-                  {{/each}}
-              </ul>
+				<li>Name: {{name}}</li>
+				<li>Description: <blockquote>{{description}}</blockquote></li>
+				<ul>
+					{{#each parameters}}
+						<li>Name: {{name}}</li>
+						<li>Type: {{type}}</li>
+						<li>Description: <blockquote>{{description}}</blockquote></li>
+					{{/each}}
+				</ul>
             {{/each}}
+		</ul>
+		<br>
+		<hr>
+		<hr>
           {{/each}}
-        {{/with}}
-
-        <br>
-        <hr>
-        <br>
-
-      </div>
-
+	{{/with}}
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 
 Адже наш layout/default.hbs має вже структуру HTML --}}

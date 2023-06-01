@@ -32,18 +32,10 @@
     <ul>
       {{#each education}}
         <div>
-          <li>
-            <p>Degree: {{degree}}</p>
-          </li>
-          <li>
-            <p>Major: {{major}}</p>
-          </li>
-          <li>
-            <p><em>University: {{university}}</em></p>
-          </li>
-          <li>
-            <p><time>Year: {{graduationYear}}</time></p>
-          </li>
+          <li>Degree: {{degree}}</li>
+          <li>Major: {{major}}</li>
+          <li><em>University: {{university}}</em></li>
+          <li><time>Year: {{graduationYear}}</time></li>
         </div>
       {{/each}}
     </ul>
@@ -53,9 +45,7 @@
     <ul>
       {{#each workExperience}}
         <div>
-          <li>
-            <p><em>Company: {{company}}</em></p>
-          </li>
+          <li><em>Company: {{company}}</em></p></li>
 
           <br />
 
@@ -65,12 +55,8 @@
 
           <br />
 
-          <li>
-            <p><time>Start date: {{startDate}}</time></p>
-          </li>
-          <li>
-            <p><time>End date: {{endDate}}</time></p>
-          </li>
+          <li><time>Start date: {{startDate}}</time></li>
+          <li><time>End date: {{endDate}}</time></li>
         </div>
       {{/each}}
 
@@ -80,9 +66,7 @@
         {{#each workExperience}}
           {{#each responsibilities}}
             <div>
-              <li>
-                <p><q>{{this}}</q></p>
-              </li>
+              <li><q>{{this}}</q></li>
             </div>
           {{/each}}
         {{/each}}
@@ -92,10 +76,10 @@
     <br />
 
     {{#each workExperience}}
-      <diV>
+      <div>
         <p><time>Year founded: {{year_founded}}</time></p>
         <p><i>Industry: {{industry}}</i></p>
-      </diV>
+      </div>
     {{/each}}
 
     <br />
@@ -104,21 +88,15 @@
       {{#each workExperience}}
         {{#each employees}}
           <div>
-            <li>
-              <p>Name: {{name}}</p>
-            </li>
+            <li>Name: {{name}}</li>
 
             <br />
 
-            <li>
-              <h2><em>{{position}}</em></h2>
-            </li>
+            <li><h2><em>{{position}}</em></h2></li>
 
             <br />
 
-            <li>
-              <p><em>Department: {{department}}</em></p>
-            </li>
+            <li><em>Department: {{department}}</em></li>
           </div>
         {{/each}}
       {{/each}}
@@ -131,15 +109,9 @@
         {{#each employees}}
           {{#each projects}}
             <div>
-              <li>
-                <p>Name: {{name}}</p>
-              </li>
-              <li>
-                <p>Description: <q>{{description}}</q></p>
-              </li>
-              <li>
-                <p>Status: {{status}}</p>
-              </li>
+              <li>Name: {{name}}</li>
+              <li>Description: <q>{{description}}</q></li>
+              <li>Status: {{status}}</li>
             </div>
           {{/each}}
         {{/each}}
@@ -154,9 +126,7 @@
           {{#each projects}}
             {{#each teams}}
               <div>
-                <li>
-                  <p>Team name: {{team_name}}</p>
-                </li>
+                <li>Team name: {{team_name}}</li>
 
                 <br />
 
@@ -166,9 +136,7 @@
 
                     <br />
 
-                    <li>
-                      <h3><em>{{title}}</em></h3>
-                    </li>
+                    <li><h3><em>{{title}}</em></h3></li>
 
                     <br />
 
@@ -182,24 +150,15 @@
                 <ul>
                   {{#each team_members}}
                     <div>
-                      <li>
-                        <p>Name: {{name}}</p>
-                      </li>
+                      <li>Name: {{name}}</li>
 
                       <br />
 
-                      <li>
-                        <h3><em>{{title}}</em></h3>
-                      </li>
+                      <li><h3><em>{{title}}</em></h3></li>
 
                       <br />
 
-                      <li>
-                        <p>Email:
-                          <a
-                            href={{email}}
-                          >{{email}}</a></p>
-                      </li>
+                      <li>Email: <a href={{email}}>{{email}}</a></li>
                     </div>
                   {{/each}}
                 </ul>
@@ -210,9 +169,7 @@
                   {{#each team_members}}
                     {{#each skills}}
                       <div>
-                        <li>
-                          {{this}}
-                        </li>
+                        <li>{{this}}</li>
                       </div>
                     {{/each}}
                   {{/each}}
@@ -224,13 +181,8 @@
                   {{#each team_members}}
                     {{#each projects}}
                       <div>
-                        <li>
-                          <p>Name: {{name}}</p>
-                        </li>
-                        <li>
-                          <p>Description:
-                            <q>{{description}}</q></p>
-                        </li>
+                        <li>Name: {{name}}</li>
+                        <li>Description: <q>{{description}}</q></li>
                       </div>
                     {{/each}}
                   {{/each}}
@@ -243,9 +195,7 @@
                     {{#each projects}}
                       {{#each technologies}}
                         <div>
-                          <li>
-                            {{this}}
-                          </li>
+                          <li>{{this}}</li>
                         </div>
                       {{/each}}
                     {{/each}}
@@ -259,15 +209,11 @@
                     {{#each projects}}
                       {{#each team_members}}
                         <div>
-                          <li>
-                            <p>Name: {{name}}</p>
-                          </li>
+                          <li>Name: {{name}}</li>
 
                           <br />
 
-                          <li>
-                            <h4><em>{{title}}</em></h4>
-                          </li>
+                          <li><h4><em>{{title}}</em></h4></li>
 
                           <br />
 
