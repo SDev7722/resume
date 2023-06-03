@@ -4,7 +4,194 @@
 }}
 
 <div>
-  ab
+
+<br>
+
+	<span class="badge text-bg-info">Make: <em>{{make}}</em></span>
+	<span class="badge text-bg-info">Model: <em>{{model}}</em></span>
+	<span class="badge text-bg-info">Year: <time>{{year}}</time></span>
+	<span class="badge text-bg-info">Color: <em>{{color}}</em></span>
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with interior}}
+				{{#if seats}}<h4>Seats:</h4>{{/if}}
+				{{#with seats}}
+					<span class="badge text-bg-info">Material: <em>{{material}}</em></span>
+					<span class="badge text-bg-info">Color: <em>{{color}}</em></span>
+					<span class="badge text-bg-info">Heated: <em>{{heated}}</em></span>
+					<span class="badge text-bg-info">Ventilated: <em>{{ventilated}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with interior}}
+				{{#if dashboard}}<h4>Dashboard:</h4>{{/if}}
+				{{#with dashboard}}
+					<span class="badge text-bg-info">Material: <em>{{material}}</em></span>
+					<span class="badge text-bg-info">Color: <em>{{color}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with interior}}
+				{{#with dashboard}}
+					{{#if display}}<h4>Display:</h4>{{/if}}
+					{{#with display}}
+						<span class="badge text-bg-info">Type: <em>{{type}}</em></span>
+						<span class="badge text-bg-info">Size: <em>{{size}}</em></span>
+						<span class="badge text-bg-info">Resolution: <em>{{resolution}}</em></span>
+						<span class="badge text-bg-info">Touchscreen: <em>{{touchscreen}}</em></span>
+					{{/with}}
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with interior}}
+				{{#if audio}}<h4>Audio:</h4>{{/if}}
+				{{#with audio}}
+					<span class="badge text-bg-info">System: <em>{{system}}</em></span>
+					<span class="badge text-bg-info">Speacers: <em>{{speacers}}</em></span>
+					<span class="badge text-bg-info">Subwoofer: <em>{{subwoofer}}</em></span>
+					<span class="badge text-bg-info">Bluetooth: <em>{{bluetooth}}</em></span>
+					<span class="badge text-bg-info">USB: <em>{{USB}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with exterior}}
+				{{#if wheels}}<h4>Wheels:</h4>{{/if}}
+				{{#with wheels}}
+					<span class="badge text-bg-info">Size: <em>{{size}}</em></span>
+					<span class="badge text-bg-info">Type: <em>{{type}}</em></span>
+					<span class="badge text-bg-info">Color: <em>{{color}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with exterior}}
+				{{#if headlights}}<h4>Headlights:</h4>{{/if}}
+			 	{{#with headlights}}
+					<span class="badge text-bg-info">Type: <em>{{type}}</em></span>
+					<span class="badge text-bg-info">Brightness: <em>{{brightness}}</em></span>
+					<span class="badge text-bg-info">Automatic: <em>{{automatic}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with safety}}
+				{{#if airbags}}<h4>Airbags:</h4>{{/if}}
+			 	{{#with airbags}}
+					<span class="badge text-bg-info">Front: <em>{{front}}</em></span>
+					<span class="badge text-bg-info">Side: <em>{{side}}</em></span>
+					<span class="badge text-bg-info">Knee: <em>{{knee}}</em></span>
+					<span class="badge text-bg-info">Rear: <em>{{rear}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with features}}
+			{{#with safety}}
+				{{#if assistance}}<h4>Assistance:</h4>{{/if}}
+			 	{{#with assistance}}
+					<span class="badge text-bg-info">Blind spot monitoring: <em>{{blind_spot_monitoring}}</em></span>
+					<span class="badge text-bg-info">Rear cross traffic alert: <em>{{rear_cross_traffic_alert}}</em></span>
+					<span class="badge text-bg-info">lane departure warning: <em>{{lane_departure_warning}}</em></span>
+					<span class="badge text-bg-info">Adaptive cruise control: <em>{{adaptive_cruise_control}}</em></span>
+					<span class="badge text-bg-info">Collision warning: <em>{{collision_warning}}</em></span>
+				{{/with}}
+			{{/with}}
+		{{/with}}
+		
+		<br>
+		<br>
+
+		{{#if engine}}<h4>Engine:</h4>{{/if}}
+		{{#with engine}}
+			<span class="badge text-bg-info">Type: <em>{{type}}</em></span>
+			<span class="badge text-bg-info">Displacement: <em>{{displacement}}</em></span>
+			<span class="badge text-bg-info">Horsepower: <em>{{horsepower}}</em></span>
+			<span class="badge text-bg-info">Torque: <em>{{torque}}</em></span>
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with engine}}
+			{{#if transmission}}<h4>Transmission:</h4>{{/if}}
+			{{#with transmission}}
+				<span class="badge text-bg-info">Type: <em>{{type}}</em></span>
+				<span class="badge text-bg-info">Gears: <em>{{gears}}</em></span>
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#if fuel_economy}}<h4>Fuel economy:</h4>{{/if}}
+		{{#with fuel_economy}}
+			<span class="badge text-bg-info">City: <em>{{city}}</em></span>
+			<span class="badge text-bg-info">Highway: <em>{{highway}}</em></span>
+			<span class="badge text-bg-info">Combined: <em>{{combined}}</em></span>
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#if price}}<h4>Price:</h4>{{/if}}
+		{{#with price}}
+			<span class="badge text-bg-info">Base: <em>{{base}}</em></span>
+			<span class="badge text-bg-info">Destination: <em>{{destination}}</em></span>
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with price}}
+			{{#if options}}<h4>Options:</h4>{{/if}}
+			{{#with options}}
+				<span class="badge text-bg-info">Navigation: <em>{{navigation}}</em></span>
+				<span class="badge text-bg-info">Moonroof: <em>{{moonroof}}</em></span>
+				<span class="badge text-bg-info">Premium paint: <em>{{premium_paint}}</em></span>
+			{{/with}}
+		{{/with}}
+
+		<br>
+		<br>
+
+		{{#with price}}
+			{{#if total}}<h4>Total:</h4>{{/if}}
+				<span class="badge text-bg-info">Total: <em>{{total}}</em></span>
+		{{/with}}	
 </div>
 
 {{!--
