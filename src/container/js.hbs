@@ -3,9 +3,110 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 }}
 
-<div>
-  ab
-</div>
+<h1>{{name}}</h1>
+<p>Description:
+  <blockquote>{{description}}</blockquote>
+</p>
+
+<br />
+
+	{{#with history}}
+		<span class="badge text-bg-info">Year: <time>{{year}}</time></span>
+		<span class="badge text-bg-info">Founder: <em>{{founder}}</em></span>
+	{{/with}}
+
+		<br>
+		<br>
+
+		<ul>
+		{{#if types}}<h4>Types:</h4>{{/if}}
+		{{#each types}}
+			<span class="badge text-bg-info"><li>{{this}}</li></span>
+		{{/each}}
+		</ul>
+
+			{{#with syntax}}
+
+			<br>
+
+			<ul>
+				{{#if variables}}<h4>Variables:</h4>{{/if}}
+				{{#each variables}}
+					<span class="badge text-bg-info"><li>{{this}}</li></span>
+				{{/each}}
+			</ul>
+
+			<br>
+
+			<ul>
+				{{#if functions}}<h4>Functions:</h4>{{/if}}
+				{{#each functions}}
+					<span class="badge text-bg-info"><li>{{this}}</li></span>
+				{{/each}}
+			</ul>
+
+			<br>
+
+			<ul>
+				{{#if conditionals}}<h4>Conditionals:</h4>{{/if}}
+				{{#each conditionals}}
+					<span class="badge text-bg-info"><li>{{this}}</li></span>
+				{{/each}}
+			</ul>
+
+			<br>
+
+			<ul>
+				{{#if loops}}<h4>Loops:</h4>{{/if}}
+				{{#each loops}}
+					<span class="badge text-bg-info"><li>{{this}}</li></span>
+				{{/each}}
+			</ul>
+
+			<br>
+
+			<ul>
+				{{#if classes}}<h4>Classes:</h4>{{/if}}
+				{{#each classes}}
+					<span class="badge text-bg-info"><li>{{this}}</li></span>
+				{{/each}}
+			</ul>
+			{{/with}}
+
+				<br>
+
+				<ul>
+				{{#if features}}<h4>Features:</h4>{{/if}}
+				{{#each features}}
+					<span class="badge text-bg-info"><li>{{this}}</li></span>
+				{{/each}}
+				</ul>
+
+					<br>
+
+					<ul>
+					{{#if libraries}}<h4>Libraries:</h4>{{/if}}
+					{{#each libraries}}
+						<span class="badge text-bg-info"><li>{{this}}</li></span>
+					{{/each}}
+					</ul>
+
+						<br>
+
+						<ul>
+						{{#if tools}}<h4>Tools:</h4>{{/if}}
+						{{#each tools}}
+							<span class="badge text-bg-info"><li>{{this}}</li></span>
+						{{/each}}
+						</ul>
+
+							<br>
+
+							{{#if community}}<h4>Community:</h4>{{/if}}
+							{{#each community}}
+							<button type="button" class="btn btn-link">Name: {{name}}</button>
+							<button type="button" class="btn btn-link">Type: <em>{{type}}</em></button>
+							{{/each}}
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
