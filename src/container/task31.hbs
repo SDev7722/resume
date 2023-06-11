@@ -223,9 +223,8 @@
     {{#with footer}}
         <h5>{{title}}</h5>
 
-        
-            <section class="col-12">
-                <div class="row gx-3 gy-2">
+        <section class="col-12">
+            <div class="row gx-3 gy-2">
                 <div class="col-3">
                     {{#each navigation}}
                     <br>
@@ -244,17 +243,17 @@
                         <br>
                         {{/each}}
                 </div>
-                    <div class="col-6">
-                        {{#each partners}}
-                        <br>
-                            <a href="{{link}}" class="btn btn-outline-info">
-                                {{name}}
-                            </a>
-                        <br>
-                        {{/each}}
-                    </div>
+                <div class="col-6">
+                    {{#each partners}}
+                    <br>
+                        <a href="{{link}}" class="btn btn-outline-info">
+                            {{name}}
+                        </a>
+                    <br>
+                    {{/each}}
                 </div>
-            </section>
+            </div>
+        </section>
         
     {{/with}}
         
