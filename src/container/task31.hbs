@@ -1,5 +1,5 @@
 <main>
-    <div class="row gy-3">
+    <div class="row gy-4">
 
         <section class="col-12">
             <div class="row g-2">
@@ -30,17 +30,15 @@
             <h1>{{title}}</h1>
 
             <div>
-                <bloquote>{{descriction}}</bloquote>
+                <blockquote>{{description}}</blockquote>
             </div>
 
-            {{#with header}}
-                {{#with button}}
-                    <div class="col-2">
-                    <a href="{{link}}" class="btn btn-primary">
-                        {{text}}
-                    </a>
-                    </div>
-                {{/with}}
+            {{#with button}}
+                <div class="col-3">
+                <a href="{{link}}" class="btn btn-primary">
+                    {{text}}
+                </a>
+                </div>
             {{/with}}
         {{/with}}
 
