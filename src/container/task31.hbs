@@ -223,8 +223,9 @@
     {{#with footer}}
         <h5>{{title}}</h5>
 
-        <div class="row gx-3 gy-2">
-            <section class="col-3">
+        
+            <section class="col-12">
+                <div class="row gx-3 gy-2">
                 <div class="col-3">
                     {{#each navigation}}
                     <br>
@@ -234,8 +235,6 @@
                     <br>
                     {{/each}}
                 </div>
-            </section>
-            <section class="col-3">
                 <div class="col-3">
                         {{#each socialMedia}}
                         <br>
@@ -245,8 +244,6 @@
                         <br>
                         {{/each}}
                 </div>
-            </section>
-            <section class="col-6">
                     <div class="col-6">
                         {{#each partners}}
                         <br>
@@ -256,8 +253,9 @@
                         <br>
                         {{/each}}
                     </div>
+                </div>
             </section>
-        </div>
+        
     {{/with}}
         
     </div>
