@@ -6,147 +6,113 @@
         </div>
     {{/with}}
 
-    <br>
+    <div class="my-4">
+        <div class="card">
+            <div class="card-body">
+                {{#with section}}
+                    {{#with about_us}}
+                        {{#with title_list}}
+                            <div class="display-6 text-end mb-5">{{main}}</div>
 
-    <div class="card">
-        <div class="card-body">
-            {{#with section}}
-                {{#with about_us}}
-                    {{#with title_list}}
-                        <div class="display-6 text-end">{{main}}</div>
+                            <h2 class="text-end mb-5"><i>{{sub}}</i></h2>
+                        {{/with}}
 
-                        <br>
-
-                        <h2 class="text-end"><i>{{sub}}</i></h2>
-                    {{/with}}
-
-                    <br>
-
-                    {{#with button}}
-                        <a href="#" class="btn btn-outline-info">
-                            {{text}}
-                        </a>
+                        {{#with button}}
+                            <a href="#" class="btn btn-outline-info">
+                                {{text}}
+                            </a>
+                        {{/with}}
                     {{/with}}
                 {{/with}}
-            {{/with}}
+            </div>
         </div>
     </div>
 
-    <br>
+    <div class="my-4">
+        <div class="card">
+            <div class="card-body">
+                {{#with section}}
+                    {{#with advantage}}
+                        <div class="display-5 text-muted mb-4">{{title}}</div>
 
-    <div class="card">
-        <div class="card-body">
-            {{#with section}}
-                {{#with advantage}}
-                    <div class="display-5 text-muted">{{title}}</div>
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with efficiency}}
+                                    <div class="display-4 text-muted">{{title}}</div>
 
-                    <br>
+                                    <h6 class="my-4"><i>{{sub_title}}</i></h6>
 
-                    <div class="card">
-                        <div class="card-body">
-                            {{#with efficiency}}
-                                <div class="display-4 text-muted">{{title}}</div>
+                                    <div class="mb-5">
+                                        <p><bloquote>{{description}}</bloquote></p>
+                                    </div>
 
-                                <br>
-
-                                <h6><i>{{sub_title}}</i></h6>
-
-                                <br>
-
-                                <div>
-                                    <p><bloquote>{{description}}</bloquote></p>
-                                </div>
-
-                                <br>
-
-                                <a href="#" class="btn btn-outline-warning">
-                                    {{button}}
-                                </a>
-                            {{/with}}                    
+                                    <a href="#" class="btn btn-outline-warning">
+                                        {{button}}
+                                    </a>
+                                {{/with}}                    
+                            </div>
                         </div>
-                    </div>
 
-                    <br>
+                        <div class="my-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    {{#with innovation}}
+                                        <div class="display-4 text-center text-muted">{{title}}</div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            {{#with innovation}}
-                                <div class="display-4 text-center text-muted">{{title}}</div>
+                                        <h6 class="text-center my-5"><i>{{sub_title}}</i></h6>
 
-                                <br>
+                                        <div class="text-center mb-5">
+                                            <p><bloquote>{{description}}</bloquote></p>
+                                        </div>
 
-                                <h6 class="text-center"><i>{{sub_title}}</i></h6>
-
-                                <br>
-
-                                <div class="text-center">
-                                    <p><bloquote>{{description}}</bloquote></p>
+                                        <a href="#" class="btn btn-outline-warning">
+                                            {{button}}
+                                        </a>
+                                    {{/with}}     
                                 </div>
-
-                                <br>
-
-                                <a href="#" class="btn btn-outline-warning">
-                                    {{button}}
-                                </a>
-                            {{/with}}     
+                            </div>
                         </div>
-                    </div>
 
-                    <br>
+                        <div class="card">
+                            <div class="card-body">
+                                {{#with collaboration}}
+                                    <div class="display-4 text-end text-muted">{{title}}</div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            {{#with collaboration}}
-                                <div class="display-4 text-end text-muted">{{title}}</div>
+                                    <h6 class="text-end my-5"><i>{{sub_title}}</i></h6>
 
-                                <br>
+                                    <div class="text-end mb-5">
+                                        <p><bloquote>{{description}}</bloquote></p>
+                                    </div>
 
-                                <h6 class="text-end"><i>{{sub_title}}</i></h6>
-
-                                <br>
-
-                                <div class="text-end">
-                                    <p><bloquote>{{description}}</bloquote></p>
-                                </div>
-
-                                <br>
-
-                                <a href="#" class="btn btn-outline-warning">
-                                    {{button}}
-                                </a>
-                            {{/with}}     
+                                    <a href="#" class="btn btn-outline-warning">
+                                        {{button}}
+                                    </a>
+                                {{/with}}     
+                            </div>
                         </div>
-                    </div>
-                {{/with}}
-            {{/with}}    
+                    {{/with}}
+                {{/with}}    
+            </div>
         </div>
     </div>
-
-    <br>
 
     <div class="card">
         <div class="card-body">
             {{#with section}}
                 {{#with agreement}}
-                    <div class="display-5">{{title}}</div>
-
-                    <br>
+                    <div class="display-5 mb-4">{{title}}</div>
 
                     <div class="card">
                         <div class="card-body">
                             {{#with info}}
-                                <h5><i>{{sub_title}}</i></h5>
-                            
-                                <br>
+                                <h5 class="mb-4"><i>{{sub_title}}</i></h5>
 
                                 <div class="card">
                                     <div class="card-body">
                                         {{#with detail}}
-                                            <div>
+                                            <div class="mb-5">
                                                 <p><bloquote>{{text}}</bloquote></p>
                                             </div>
-
-                                            <br>
 
                                             <a href="#" class="btn btn-success">
                                                 {{button}}

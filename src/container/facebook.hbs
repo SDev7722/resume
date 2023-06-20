@@ -4,143 +4,105 @@
 }}
 
 <div>
+	<span class="badge text-bg-info mt-3 mb-5">Name: {{name}}</span>
 
-	<br>
-
-	<span class="badge text-bg-info">Name: {{name}}</span>
-
-	<br>
-	<br>
-
-	<ul>
+	<ul class="ps-5">
 	{{#if users}}<h4>Users:</h4>{{/if}}
 	{{#each users}}
 		<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 		<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 		<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-		<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
+		<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 		
-		<br>
-
-		<ul>
+		<ul class="ps-5">
 		{{#if friends}}<h4>Friends:</h4>{{/if}}
 		{{#each friends}}
 			<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 			<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 			<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-			<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
+			<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 
-				<br>
-
-				<ul>
+				<ul class="ps-5"> 
 					{{#if mutual_friends}}<h4>Mutual friends:</h4>{{/if}}
 					{{#each mutual_friends}}
 						<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 						<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 						<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-						<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
-
-						<br>
-						
+						<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 					{{/each}}
 				</ul>
 				<p><span class="badge text-bg-info">ID: <em>{{id}}</em></span></p>
 				<p><span class="badge text-bg-info">Name: <em>{{name}}</em></span></p>
 				<p><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></p>
-				<p><span class="badge text-bg-info">Age: <em>{{age}}</em></span></p>
-
-				<br>
-
+				<p><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></p>
 		{{/each}}
 
-				<ul>
-				{{#if mutual_friends}}<h4>Mutual friends:</h4>{{/if}}
-				{{#each mutual_friends}}
-					<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
-					<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
-					<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-					<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
-
-					<br>
-					
-				{{/each}}
+				<ul class="ps-5">
+					{{#if mutual_friends}}<h4>Mutual friends:</h4>{{/if}}
+					{{#each mutual_friends}}
+						<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
+						<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
+						<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
+						<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
+					{{/each}}
 				</ul>
 		</ul>
-			<ul>
+			<ul class="ps-5">
 				{{#if groups}}<h4>Groups:</h4>{{/if}}
 				{{#each groups}}
 					<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 					<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
-					<li><span class="badge text-bg-info">Description: <bloquote>{{description}}</bloquote></span></li>
+					<li><span class="badge text-bg-info mb-4">Description: <bloquote>{{description}}</bloquote></span></li>
 
-					<br>
-
-				<ul>
+				<ul class="ps-5">
 					{{#if members}}<h4>members:</h4>{{/if}}
 					{{#each members}}
 						<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 						<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 						<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-						<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
-
-						<br>
-
+						<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 					{{/each}}
 				</ul>
 					<p><span class="badge text-bg-info">ID: <em>{{id}}</em></span></p>
 					<p><span class="badge text-bg-info">Name: <em>{{name}}</em></span></p>
-					<p><span class="badge text-bg-info">Description: <bloquote>{{description}}</bloquote></span></p>
-
-					<br>
-
+					<p><span class="badge text-bg-info mb-4">Description: <bloquote>{{description}}</bloquote></span></p>
 				{{/each}}
 			</ul>
 				<p><span class="badge text-bg-info">ID: <em>{{id}}</em></span></p>
 				<p><span class="badge text-bg-info">Name: <em>{{name}}</em></span></p>
 				<p><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></p>
-				<p><span class="badge text-bg-info">Age: <em>{{age}}</em></span></p>
+				<p><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></p>
 
-				<br>
-
-			<ul>
+			<ul class="ps-5">
 				{{#if friends}}<h4>Friends:</h4>{{/if}}
 				{{#each friends}}
 					<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 					<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 					<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-					<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
-
-					<br>
+					<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 
 						{{#if mutual_friends}}<h4>Mutual friends:</h4>{{/if}}
 						{{#each mutual_friends}}
 							<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 							<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 							<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-							<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
-
-							<br>
-
+							<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 						{{/each}}
-						<ul>
+
+						<ul class="ps-5">
 							{{#if groups}}<h4>Groups:</h4>{{/if}}
 							{{#each groups}}
 								<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 								<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
-								<li><span class="badge text-bg-info">Description: <bloquote>{{description}}</bloquote></span></li>
+								<li><span class="badge text-bg-info mb-4">Description: <bloquote>{{description}}</bloquote></span></li>
 
-								<br>
-
-									<ul>
+									<ul class="ps-5">
 										{{#if members}}<h4>Members:</h4>{{/if}}
 										{{#each members}}
 											<li><span class="badge text-bg-info">ID: <em>{{id}}</em></span></li>
 											<li><span class="badge text-bg-info">Name: <em>{{name}}</em></span></li>
 											<li><span class="badge text-bg-info">Gender: <em>{{gender}}</em></span></li>
-											<li><span class="badge text-bg-info">Age: <em>{{age}}</em></span></li>
-
-											<br>
-											
+											<li><span class="badge text-bg-info mb-4">Age: <em>{{age}}</em></span></li>
 										{{/each}}
 									</ul>
 							{{/each}}

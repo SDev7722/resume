@@ -4,17 +4,12 @@
 }}
 
 <div>
-
-<br>
-
-	<span class="badge text-bg-info">Make: <em>{{make}}</em></span>
+	<span class="badge text-bg-info mt-3">Make: <em>{{make}}</em></span>
 	<span class="badge text-bg-info">Model: <em>{{model}}</em></span>
 	<span class="badge text-bg-info">Year: <time>{{year}}</time></span>
 	<span class="badge text-bg-info">Color: <em>{{color}}</em></span>
 
-		<br>
-		<br>
-
+	<div class="mt-4">
 		{{#with features}}
 			{{#with interior}}
 				{{#if seats}}<h4>Seats:</h4>{{/if}}
@@ -26,11 +21,9 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
-		{{#with features}}
+	</div>
+	<div class="mt-4">
+		{{#with features class="pt-5"}}
 			{{#with interior}}
 				{{#if dashboard}}<h4>Dashboard:</h4>{{/if}}
 				{{#with dashboard}}
@@ -39,10 +32,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with features}}
 			{{#with interior}}
 				{{#with dashboard}}
@@ -56,10 +47,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with features}}
 			{{#with interior}}
 				{{#if audio}}<h4>Audio:</h4>{{/if}}
@@ -72,10 +61,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with features}}
 			{{#with exterior}}
 				{{#if wheels}}<h4>Wheels:</h4>{{/if}}
@@ -86,10 +73,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with features}}
 			{{#with exterior}}
 				{{#if headlights}}<h4>Headlights:</h4>{{/if}}
@@ -100,10 +85,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with features}}
 			{{#with safety}}
 				{{#if airbags}}<h4>Airbags:</h4>{{/if}}
@@ -115,10 +98,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with features}}
 			{{#with safety}}
 				{{#if assistance}}<h4>Assistance:</h4>{{/if}}
@@ -131,10 +112,8 @@
 				{{/with}}
 			{{/with}}
 		{{/with}}
-		
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#if engine}}<h4>Engine:</h4>{{/if}}
 		{{#with engine}}
 			<span class="badge text-bg-info">Type: <em>{{type}}</em></span>
@@ -142,10 +121,8 @@
 			<span class="badge text-bg-info">Horsepower: <em>{{horsepower}}</em></span>
 			<span class="badge text-bg-info">Torque: <em>{{torque}}</em></span>
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with engine}}
 			{{#if transmission}}<h4>Transmission:</h4>{{/if}}
 			{{#with transmission}}
@@ -153,29 +130,23 @@
 				<span class="badge text-bg-info">Gears: <em>{{gears}}</em></span>
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#if fuel_economy}}<h4>Fuel economy:</h4>{{/if}}
 		{{#with fuel_economy}}
 			<span class="badge text-bg-info">City: <em>{{city}}</em></span>
 			<span class="badge text-bg-info">Highway: <em>{{highway}}</em></span>
 			<span class="badge text-bg-info">Combined: <em>{{combined}}</em></span>
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#if price}}<h4>Price:</h4>{{/if}}
 		{{#with price}}
 			<span class="badge text-bg-info">Base: <em>{{base}}</em></span>
 			<span class="badge text-bg-info">Destination: <em>{{destination}}</em></span>
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with price}}
 			{{#if options}}<h4>Options:</h4>{{/if}}
 			{{#with options}}
@@ -184,14 +155,13 @@
 				<span class="badge text-bg-info">Premium paint: <em>{{premium_paint}}</em></span>
 			{{/with}}
 		{{/with}}
-
-		<br>
-		<br>
-
+	</div>
+	<div class="mt-4">
 		{{#with price}}
 			{{#if total}}<h4>Total:</h4>{{/if}}
 				<span class="badge text-bg-info">Total: <em>{{total}}</em></span>
-		{{/with}}	
+		{{/with}}
+	</div>
 </div>
 
 {{!--

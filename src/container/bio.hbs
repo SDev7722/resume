@@ -2,14 +2,7 @@
 в якому міститься код, котрий буде віддаватися по  шляху (PATH) - "/summary" }}
 
 <div>
-
-  <br />
-  <hr />
-  <br />
-
-  <h1><em>{{name}}</em></h1>
-
-  <br />
+  <h1 class="mb-5"><em>{{name}}</em></h1>
 
   <p>Birthdate: <time>{{birthdate}}</time></p>
   <p>Birthplace: <q>{{birthplace}}</q></p>
@@ -18,19 +11,14 @@
   <p>Nationality: <q>{{nationality}}</q></p>
   <p>Occupation: <q>{{occupation}}</q></p>
 
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each known_for}}
       <div>
         <li><q>{{this}}</q></li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each education}}
       <div>
         <li>Degree: <em>{{degree}}</em></li>
@@ -40,28 +28,17 @@
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5">
     {{#each notable_publications}}
       <div>
-
-        <br />
-
-        <li><h2><em>{{title}}</em></h2></li>
-
-        <br />
+        <li class="my-5"><h2><em>{{title}}</em></h2></li>
 
         <li>Year: <time>{{year}}</time></li>
         <li>Pyblisher: <q>{{publisher}}</q></li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each partners}}
       <div>
         <li>Name: {{name}}</li>
@@ -70,84 +47,51 @@
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each awards}}
       <div>
-
-        <br />
-
-        <li><h3><em>{{title}}</em></h3></li>
-
-        <br />
+        <li class="mb-5"><h3><em>{{title}}</em></h3></li>
 
         <li>Year: <time>{{year}}</time></li>
         <li>Description: <q>{{description}}</q></li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each influences}}
       <div>
         <li>{{this}}</li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each influenced}}
       <div>
         <li>{{this}}</li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each quotes}}
       <div>
         <li><q>{{this}}</q></li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#each major_discoveries}}
       <div>
-
-        <br />
-
-        <li><h4><em>{{title}}</em></h4></li>
-
-        <br />
+        <li class="mb-5"><h4><em>{{title}}</em></h4></li>
 
         <li>Year: <time>{{year}}</time></li>
         <li>Description: <q>{{description}}</q></li>
       </div>
     {{/each}}
   </ul>
-
-  <br />
-
-  <ul>
+  <ul class="ps-5 pt-5">
     {{#with contributions}}
       <div>
-
-        <br />
-
-        <li><h5><em>{{title}}</em></h5></li>
-
-        <br />
+        <li class="mb-5"><h5><em>{{title}}</em></h5></li>
 
         <li>Description: <q>{{description}}</q></li>
         <li>Year: <time>{{year}}</time></li>
@@ -157,11 +101,6 @@
       </div>
     {{/with}}
   </ul>
-
-  <br />
-  <hr />
-  <br />
-
 </div>
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 
