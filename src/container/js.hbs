@@ -4,21 +4,16 @@
 }}
 
 <h1>{{name}}</h1>
-<p>Description:
+<p class="mb-4">Description:
   <blockquote>{{description}}</blockquote>
 </p>
 
-<br />
-
 	{{#with history}}
 		<span class="badge text-bg-info">Year: <time>{{year}}</time></span>
-		<span class="badge text-bg-info">Founder: <em>{{founder}}</em></span>
+		<span class="badge text-bg-info mb-5">Founder: <em>{{founder}}</em></span>
 	{{/with}}
 
-		<br>
-		<br>
-
-		<ul>
+		<ul class="ps-5">
 		{{#if types}}<h4>Types:</h4>{{/if}}
 		{{#each types}}
 			<span class="badge text-bg-info"><li>{{this}}</li></span>
@@ -26,46 +21,36 @@
 		</ul>
 
 			{{#with syntax}}
-
-			<br>
-
-			<ul>
+			
+			<ul class="ps-5 pt-4">
 				{{#if variables}}<h4>Variables:</h4>{{/if}}
 				{{#each variables}}
 					<span class="badge text-bg-info"><li>{{this}}</li></span>
 				{{/each}}
 			</ul>
 
-			<br>
-
-			<ul>
+			<ul class="ps-5 pt-4">
 				{{#if functions}}<h4>Functions:</h4>{{/if}}
 				{{#each functions}}
 					<span class="badge text-bg-info"><li>{{this}}</li></span>
 				{{/each}}
 			</ul>
 
-			<br>
-
-			<ul>
+			<ul class="ps-5 pt-4">
 				{{#if conditionals}}<h4>Conditionals:</h4>{{/if}}
 				{{#each conditionals}}
 					<span class="badge text-bg-info"><li>{{this}}</li></span>
 				{{/each}}
 			</ul>
 
-			<br>
-
-			<ul>
+			<ul class="ps-5 pt-4">
 				{{#if loops}}<h4>Loops:</h4>{{/if}}
 				{{#each loops}}
 					<span class="badge text-bg-info"><li>{{this}}</li></span>
 				{{/each}}
 			</ul>
 
-			<br>
-
-			<ul>
+			<ul class="ps-5 pt-4">
 				{{#if classes}}<h4>Classes:</h4>{{/if}}
 				{{#each classes}}
 					<span class="badge text-bg-info"><li>{{this}}</li></span>
@@ -73,34 +58,26 @@
 			</ul>
 			{{/with}}
 
-				<br>
-
-				<ul>
+				<ul class="ps-5 pt-4">
 				{{#if features}}<h4>Features:</h4>{{/if}}
 				{{#each features}}
 					<span class="badge text-bg-info"><li>{{this}}</li></span>
 				{{/each}}
 				</ul>
 
-					<br>
-
-					<ul>
+					<ul class="ps-5 pt-4">
 					{{#if libraries}}<h4>Libraries:</h4>{{/if}}
 					{{#each libraries}}
 						<span class="badge text-bg-info"><li>{{this}}</li></span>
 					{{/each}}
 					</ul>
 
-						<br>
-
-						<ul>
+						<ul class="ps-5 py-4">
 						{{#if tools}}<h4>Tools:</h4>{{/if}}
 						{{#each tools}}
 							<span class="badge text-bg-info"><li>{{this}}</li></span>
 						{{/each}}
 						</ul>
-
-							<br>
 
 							{{#if community}}<h4>Community:</h4>{{/if}}
 							{{#each community}}

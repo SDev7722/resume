@@ -9,14 +9,12 @@
         <section>
             {{> title data="Work history" big=true}}
             <div>
-                <ul>
+                <ul class="ps-5">
                     {{#each works}}
-                        <li>
-                            <div>{{position}}</div>
+                        <li class="mb-4">
+                            <div class="mb-4">{{position}}</div>
 
-                            <br>
-
-                            <div>
+                            <div class="mb-4">
                                 {{duration.from}} - 
                                 {{#if duration.to}} 
                                     {{duration.to}} 
@@ -24,8 +22,6 @@
                                     (досі працюємо) 
                                 {{/if}}
                             </div>
-
-                            <br>
 
                             <div>
                                 {{#if company.url}}
@@ -35,16 +31,11 @@
                                 {{/if}}
                             </div>
 
-                            <br>
-                            <br>
-
-                            <div>
+                            <div class="mt-5 mb-4">
                                 <strong>Project ({{projectAmount}})</strong>
                             </div>
 
-                            <br>
-
-                            <ul>
+                            <ul class="ps-5">
                                 {{#each projects}}
                                     <li>
                                         <div>{{> link text=name href=url blank=true noLine=true}}</div>
@@ -53,32 +44,24 @@
                                             <p>About: <br> {{about}}</p>
                                         </div>
 
-                                        <br>
-                                        
-                                        <div>
+                                        <div class="my-4">
                                             <em>Project stacks ({{stackAmount}})</em>
                                         </div>
 
-                                        <br>
-
                                         <div>
-                                            <ul>
+                                            <ul class="ps-5">
                                                 {{#each stacks}}
                                                     <li>{{name}}</li>
                                                 {{/each}}
                                             </ul>
                                         </div>
 
-                                        <br>
-
-                                        <div>
+                                        <div class="my-4">
                                             <em>Project awards ({{awardAmount}})</em>
                                         </div>
 
-                                        <br>
-
                                         <div>
-                                            <ul>
+                                            <ul class="ps-5">
                                                 {{#each awards}}
                                                     <li>{{name}}</li>
                                                 {{/each}}
@@ -88,7 +71,6 @@
                                 {{/each}}
                             </ul>
                         </li>
-                        <br>
                     {{/each}}
                 </ul>
             </div>

@@ -2,75 +2,82 @@
 в якому міститься код, котрий буде віддаватися по  шляху (PATH) - "/summary" }}
 
 <div>
-  {{#with program }}
-  <div>
-    {{#with excursion }}
-        <h1>{{> title data="Excursion"}}</h1>
-        <div>
-			<h2> Name: "{{name}}"</h2>
-			<div><address>{{location.city}},</address> <address>{{location.country}}</address></div>
-			<br>
-            <time>{{date}}</time>
-			<h2>{{> title data="Program:"}}</h2>
+  	{{#with program }}
+  	<div>
+		{{#with excursion }}
+			<h1>{{> title data="Excursion"}}</h1>
 			<div>
-				{{#each program }}
-				<ul>
-					<li>
-						<div><h3>{{name}}</h3></div>
-						<div>Type: {{type}}</div>
-						<div>Duration: {{duration}}</div>
-						<div>
-							{{#with details}}
+				<h2> Name: "{{name}}"</h2>
+
+				<div class="my-4"><address>{{location.city}},</address> <address>{{location.country}}</address></div>
+				<time>{{date}}</time>
+
+				<h2 class="mt-4">{{> title data="Program:"}}</h2>
+				<div>
+					{{#each program }}
+					<ul>
+						<li>
+							<div class="mb-4"><h3>{{name}}</h3></div>
+
+							<div>Type: {{type}}</div>
+							<div>Duration: {{duration}}</div>
 							<div>
+								{{#with details}}
 								<div>
-									{{#with museum }}
-									<div><strong>{{name}}</strong></div>
-									<div><address>{{location.address}},</address> <address>{{location.city}},</address> <address>{{location.country}}</address></div>
-									<p><em> Exhibits: </em></p>
 									<div>
-										{{#each exhibits }}
+										{{#with museum }}
+										<div><strong>{{name}}</strong></div>
+										<div><address>{{location.address}},</address> <address>{{location.city}},</address> <address>{{location.country}}</address></div>
+										<p><em> Exhibits: </em></p>
+										<div>
+											{{#each exhibits }}
+											<ul>
+												<li><b>{{name}}</b>
+													<div class="my-3">
+														{{#if artist}}{{artist}}{{else}} ----- {{/if}}
+													</div>
+													<div class="mb-3">
+														{{description}}
+													</div>
+													{{#if audio_guide}}(audio guide){{/if}}
+												</li>
+											</ul>
+											{{/each}}
+										</div>
+										{{/with}}
+									</div>
+									<div>
+										{{#with venue }}
+										<div><strong>{{name}}</strong></div>
+										<div><address>{{location.address}},</address> <address>{{location.city}},</address> <address>{{location.country}}</address></div>
+										{{/with}}
+									</div>
+									<div class="py-4">
+										{{#each performers}}
 										<ul>
-											<li><b>{{name}}</b><br />
-												{{#if artist}}{{artist}}{{else}} ----- {{/if}}<br />
-												{{description}}<br />
-												{{#if audio_guide}}(audio guide){{/if}}
+											<li>
+												{{name}} {{type}}
 											</li>
 										</ul>
 										{{/each}}
 									</div>
-									{{/with}}
+									<p> Guide: {{guide.name}}
+										<div class="my-3">
+											Language: {{guide.language}}
+										</div>
+										Rating: {{guide.rating}}
+									</p>
 								</div>
-								<div>
-									{{#with venue }}
-									<div><strong>{{name}}</strong></div>
-									<div><address>{{location.address}},</address> <address>{{location.city}},</address> <address>{{location.country}}</address></div>
-									{{/with}}
-								</div>
-								<br />
-								<div>
-									{{#each performers}}
-									<ul>
-										<li>
-											{{name}} {{type}}
-										</li>
-									</ul>
-									{{/each}}
-								</div>
-								<p> Guide: {{guide.name}} <br />
-									Language: {{guide.language}} <br />
-									Rating: {{guide.rating}}
-								</p>
+								{{/with}}
 							</div>
-							{{/with}}
-						</div>
-					</li>
-				</ul>
-				{{/each}}
+						</li>
+					</ul>
+					{{/each}}
+				</div>
 			</div>
-		</div>
 		{{/with}}
 	</div>
-{{/with}}
+	{{/with}}
 </div>
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 

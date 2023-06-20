@@ -3,18 +3,18 @@
 
 	{{#with web}}
         {{#each languages}}
-        <ul>
+        <ul class="ps-5">
             <li>Name: {{name}}</li>
             <li>Version: <em>{{version}}</em></li>
             <li>Description: <blockquote>{{description}}</blockquote></li>
 
-            <br />
-            <hr>
+            <hr class="mt-5">
+
             {{#if elements}}<h4>Elements:</h4>{{/if}}
             {{#each elements}}
                 <li>Name: {{name}}</p></li>
                 <li>Description:<blockquote>{{description}}</blockquote></li>
-                <ul>
+                <ul class="ps-5">
                   {{#each attributes}}
                       <li>Name: {{name}}</li>
                       <li>Description: <blockquote>{{description}}</blockquote></li>
@@ -27,7 +27,7 @@
             {{#each properties}}
 				<li>Name: {{name}}</li>
 				<li>Description: <blockquote>{{description}}</blockquote></li>
-				<ul>
+				<ul class="ps-5">
 					{{#each values}}
 						<li>Value: {{value}}</li>
 						<li>Description: <blockuote>{{description}}</blockuote></li>
@@ -39,7 +39,7 @@
             {{#each functions}}
 				<li>Name: {{name}}</li>
 				<li>Description: <blockquote>{{description}}</blockquote></li>
-				<ul>
+				<ul class="ps-5">
 					{{#each parameters}}
 						<li>Name: {{name}}</li>
 						<li>Type: {{type}}</li>
@@ -48,11 +48,10 @@
 				</ul>
             {{/each}}
 		</ul>
-		<br>
-		<hr>
-		<hr>
+
+		<hr class="mt-5">
           {{/each}}
 	{{/with}}
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 
-Адже наш layout/default.hbs має вже структуру HTML --}}
+Адже наш layout/default.hbs  має вже структуру HTML --}}

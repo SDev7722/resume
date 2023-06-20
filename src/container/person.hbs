@@ -2,16 +2,9 @@
 в якому міститься код, котрий буде віддаватися по  шляху (PATH) - "/summary" }}
 
 <div>
-
-  <br />
-  <hr />
-  <br />
-
   {{#with person}}
     <div>
-      <h1>{{name}}</h1>
-
-      <br />
+      <h1 class="mb-5">{{name}}</h1>
 
       <p>Age: {{age}}</p>
       <p>Gender: {{gender}}</p>
@@ -27,9 +20,7 @@
       </div>
     {{/with}}
 
-    <br />
-
-    <ul>
+    <ul class="ps-5 pt-4">
       {{#each education}}
         <div>
           <li>Degree: {{degree}}</li>
@@ -40,29 +31,21 @@
       {{/each}}
     </ul>
 
-    <br />
-
-    <ul>
+    <ul class="ps-5 pt-4">
       {{#each workExperience}}
         <div>
-          <li><em>Company: {{company}}</em></p></li>
+          <li class="mb-4"><em>Company: {{company}}</em></p></li>
 
-          <br />
-
-          <li>
+          <li class="my-5">
             <h2><em>{{title}}</em></h2>
           </li>
-
-          <br />
 
           <li><time>Start date: {{startDate}}</time></li>
           <li><time>End date: {{endDate}}</time></li>
         </div>
       {{/each}}
 
-      <br />
-
-      <ul>
+      <ul class="ps-5 pt-4">
         {{#each workExperience}}
           {{#each responsibilities}}
             <div>
@@ -73,28 +56,22 @@
       </ul>
     </ul>
 
-    <br />
+    <div class="my-4">
+      {{#each workExperience}}
+        <div>
+          <p><time>Year founded: {{year_founded}}</time></p>
+          <p><i>Industry: {{industry}}</i></p>
+        </div>
+      {{/each}}
+    </div>
 
-    {{#each workExperience}}
-      <div>
-        <p><time>Year founded: {{year_founded}}</time></p>
-        <p><i>Industry: {{industry}}</i></p>
-      </div>
-    {{/each}}
-
-    <br />
-
-    <ul>
+    <ul class="ps-5">
       {{#each workExperience}}
         {{#each employees}}
           <div>
             <li>Name: {{name}}</li>
 
-            <br />
-
-            <li><h2><em>{{position}}</em></h2></li>
-
-            <br />
+            <li class="my-5"><h2><em>{{position}}</em></h2></li>
 
             <li><em>Department: {{department}}</em></li>
           </div>
@@ -102,9 +79,7 @@
       {{/each}}
     </ul>
 
-    <br />
-
-    <ul>
+    <ul class="ps-5 pt-4">
       {{#each workExperience}}
         {{#each employees}}
           {{#each projects}}
@@ -118,54 +93,38 @@
       {{/each}}
     </ul>
 
-    <br />
-
-    <ul>
+    <ul class="ps-5 pt-4">
       {{#each workExperience}}
         {{#each employees}}
           {{#each projects}}
             {{#each teams}}
               <div>
-                <li>Team name: {{team_name}}</li>
-
-                <br />
+                <li class="mb-4">Team name: {{team_name}}</li>
 
                 {{#with team_leader}}
                   <div>
                     <p>Name: {{name}}</p>
 
-                    <br />
-
-                    <li><h3><em>{{title}}</em></h3></li>
-
-                    <br />
+                    <li class="my-5"><h3><em>{{title}}</em></h3></li>
 
                     <p>Email:
                       <a href={{email}}>{{email}}</a></p>
                   </div>
                 {{/with}}
 
-                <br />
-
-                <ul>
+                <ul class="ps-5 pt-4">
                   {{#each team_members}}
                     <div>
                       <li>Name: {{name}}</li>
 
-                      <br />
-
-                      <li><h3><em>{{title}}</em></h3></li>
-
-                      <br />
+                      <li class="my-5"><h3><em>{{title}}</em></h3></li>
 
                       <li>Email: <a href={{email}}>{{email}}</a></li>
                     </div>
                   {{/each}}
                 </ul>
 
-                <br />
-
-                <ul>
+                <ul class="ps-5 pt-4">
                   {{#each team_members}}
                     {{#each skills}}
                       <div>
@@ -175,9 +134,7 @@
                   {{/each}}
                 </ul>
 
-                <br />
-
-                <ul>
+                <ul class="ps-5 pt-4">
                   {{#each team_members}}
                     {{#each projects}}
                       <div>
@@ -188,9 +145,7 @@
                   {{/each}}
                 </ul>
 
-                <br />
-
-                <ul>
+                <ul class="ps-5 pt-4">
                   {{#each team_members}}
                     {{#each projects}}
                       {{#each technologies}}
@@ -202,20 +157,14 @@
                   {{/each}}
                 </ul>
 
-                <br />
-
-                <ul>
+                <ul class="ps-5 pt-4">
                   {{#each team_members}}
                     {{#each projects}}
                       {{#each team_members}}
                         <div>
                           <li>Name: {{name}}</li>
 
-                          <br />
-
-                          <li><h4><em>{{title}}</em></h4></li>
-
-                          <br />
+                          <li class="my-5"><h4><em>{{title}}</em></h4></li>
 
                         </div>
                       {{/each}}
@@ -230,11 +179,6 @@
       {{/each}}
     </ul>
   {{/with}}
-
-  <br />
-  <hr />
-  <br />
-
 </div>
 
 {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs 
