@@ -1,0 +1,176 @@
+<main>
+    <div class="row gy-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="nav p-3">
+                    {{#with navigation}}
+                        {{#each links}}
+                            <div class="nav-item">
+                                <a href='{{href}}' class='nav-link'>{{text}}</a>
+                            </div>
+                        {{/each}}
+                    {{/with}}
+
+                    <div class="nav-item">
+                        <a href='#' class='nav-link disabled'>Disabled</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    {{#with newsBlock}}
+        <h1 class="text-center mt-5 mb-4">{{title}}</h1>
+
+    <section class="col-12">
+            <div class="row gx-3 gy-5">
+                {{#each cards}}
+                    <div class="col-3">
+                        <div class="card h-100 text-bg-secondary">
+                            <div class="card-header text-bg-secondary">
+                                <h6 class="mb-1">{{title}} 
+                                    {{#if isNew includeZero=true}}
+                                        <span class='badge text-bg-success rounded-pill ms-2'>Нова</span>
+                                    {{/if}}
+                                    {{#if isTop includeZero=true}}
+                                        <span class='badge text-bg-danger rounded-pill ms-2'>Топ</span>
+                                    {{/if}}
+                                </h6>
+                            </div>
+
+                            <div class="card-body text-bg-secondary">
+                                <p>
+                                    <blockquote>{{description}}</blockquote>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}                                                                                                         
+            </div>
+        </section>
+    {{/with}}
+
+        <hr class="my-5">
+
+        <div class='col-12 mb-5'>
+            {{#with goodsBlock}}
+                <div class='nav nav-tabs'>
+                    {{#each tabs}}
+                        {{#if isActive includeZero=true}}
+                            <div class='nav-item'>
+                                <a href='#' class='nav-link active'><b>{{text}}</b></a>
+                            </div>
+                        {{else}}
+                        {{#if isDisabled includeZero=true}}
+                            <div class='nav-item'>
+                                <a href='#' class='nav-link disabled'>{{text}}</a>
+                            </div>
+                        {{else}}
+                            <div class='nav-item'>
+                                <a href='#' class='nav-link'>{{text}}</a>
+                            </div>
+                        {{/if}}
+                        {{/if}}              
+                    {{/each}}
+                </div>
+            {{/with}}
+        </div>
+
+        {{#with goodsBlock}}
+            <section class="col-12">
+                <div class="row gx-3 gy-5">
+                    {{#each cards}}
+                        <div class="col-4">
+                            <div class="card h-100 text-bg-light">
+                                    <img class="card-img-top" src="{{image}}" alt="Product photo">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {{title}}
+                                        {{#if isHot includeZero=true}}
+                                            <span class='badge text-bg-warning rounded-pill ms-2'>HOT!</span>
+                                        {{/if}}
+                                        {{#if isNew includeZero=true}}
+                                            <span class='badge text-bg-primary rounded-pill ms-2'>Нове</span>
+                                        {{/if}}
+                                    </h5>
+                                    <p>
+                                        <blockquote>{{description}}</blockquote>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/with}}
+
+        <hr class="my-5">
+
+        {{#with subscribe}}
+            <section class="col-12 mb-4">
+                <div class="row g-2">
+                    <div class="card h-100 text-bg-secondary">
+                        <div class="card-body">
+                            <h2 class="card-title">{{header}}</h2>
+                            <p>
+                                <blockquote>{{description}}</blockquote>
+                            </p>
+                            
+                            <div class='pb2'>
+                                <div class='nav flex-column'>
+                                    {{#each buttons}}
+                                        <div class='nav-item mb-2'>
+                                            <a href="link" class="btn btn-primary">{{text}}</a>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {{/with}}
+
+        <hr class="my-5">
+
+        {{#with service}}
+            <section class="col-12 mb-4">
+                <div class="row g-2">
+                    <div class="card h-100 text-bg-success">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">{{title}}</h2>
+                            <p>
+                                <blockquote>{{description}}</blockquote>
+                            </p>
+                            
+                            <div class='pb2'>
+                                <div class='nav flex-column text-center'>
+                                    {{#each buttons}}
+                                        <div class='nav-item mb-2'>
+                                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {{/with}}
+
+        <hr class="mt-5">
+
+        <footer class="nav">
+            {{#each footer}}
+                <ul class="nav-item col-2">
+                    {{#each this}}
+                        <div class="mb-1">
+                            <li class='nav-link'>
+                                <a href='{{link}}' class='nav-link {{#if @last}}disabled{{/if}}'>{{text}}</a>
+                            </li>
+                        </div>
+                    {{/each}}
+                </ul>
+            {{/each}}
+        </footer>
+    </div>
+</main>
