@@ -1,6 +1,6 @@
 <main>
     <div class="row gy-4">
-        <div class="col-12">
+        <header class="col-12">
             <div class="card">
                 <div class="nav p-3">
                     {{#with navigation}}
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
    
     {{#with newsBlock}}
         <h1 class="text-center mt-5 mb-4">{{title}}</h1>
@@ -142,7 +142,7 @@
                                 <blockquote>{{description}}</blockquote>
                             </p>
                             
-                            <div class='pb2'>
+                            <div class='pb-2'>
                                 <div class='nav flex-column text-center'>
                                     {{#each buttons}}
                                         <div class='nav-item mb-2'>
