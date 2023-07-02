@@ -1,0 +1,41 @@
+
+{{#each goodsBlock}}
+    <section class="card pb-3">
+        <div class="row">
+            <div class="col-2 pt-3 ps-4">
+                <img style='border-radius: 8px' src='{{image}}' alt='Product photo'/>
+            </div>
+            <div class="col-4 p-2">
+                <div class="mt-2"><b>{{name}}</b></div>
+                <p>{{description}}</p>
+            </div>
+            <div class="col-2 p-1">
+                {{#with price}}
+                    <div class="ms-5 mt-4 mb-3">{{title}}</div>
+                    <div class="ms-5"><strong>{{value}}</strong></div>
+                {{/with}}
+            </div>
+            <div class="col-2 pt-4">
+                <div class="mt-4 ms-4">{{amount}}</div>
+            </div>
+            {{#each buttons}}
+                <div class="col-2 pt-2">
+                    {{#if isPrimary includeZero=true}}
+                        <div class="row">
+                            <div class="mt-3 mb-2">
+                                <a href='#' class='btn btn-primary'>Додати</a>
+                            </div>
+                    {{else}}
+                    {{#if isDanger includeZero=true}}
+                            <div>
+                                <a href='#' class='btn btn-outline-danger'>Видалити</a>
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+    </section>  
+{{/each}}
+
