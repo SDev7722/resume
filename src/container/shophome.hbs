@@ -81,15 +81,16 @@
                     {{#each cards}}
                         <div class="col-4">
                             <div class="card h-100 text-bg-light">
-                                    <img class="card-img-top" src="{{image}}" alt="Product photo">
+                                <img class="card-img-top" src="{{image}}" alt="Product photo">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         {{title}}
                                         {{#if isHot includeZero=true}}
                                             <span class='badge text-bg-warning rounded-pill ms-2'>HOT!</span>
-                                        {{/if}}
+                                        {{else}}
                                         {{#if isNew includeZero=true}}
                                             <span class='badge text-bg-primary rounded-pill ms-2'>Нове</span>
+                                        {{/if}}
                                         {{/if}}
                                     </h5>
                                     <p>
@@ -119,7 +120,7 @@
                                 <div class='nav flex-column'>
                                     {{#each buttons}}
                                         <div class='nav-item mb-2'>
-                                            <a href="link" class="btn btn-primary">{{text}}</a>
+                                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
                                         </div>
                                     {{/each}}
                                 </div>
