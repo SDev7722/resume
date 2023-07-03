@@ -1,0 +1,36 @@
+{{#each itemList}}
+    <div class="row gy-0">
+        <section class="card pb-3">
+            <div class="row">
+                <div class="col-3 mt-4 mb-2">
+                    <p>{{number}}</p>
+                    <p><b>{{status}}</b></p>
+                </div>
+                {{#with amount}}
+                    <div class="col-2 mt-4 mb-2">
+                        <p>{{title}}</p>
+                        <p><strong>{{value}}</strong></p>
+                    </div>
+                {{/with}}
+                <div class="col-5 pt-3 pe-5">
+                    <div class="row">
+                        {{#each images}}
+                            <div class="col-4">
+                                <img style='border-radius: 8px' src='{{this}}' alt='Product photo'/>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+                {{#with button}}
+                    <div class="col-2">
+                        {{#if isPrimary includeZero=true}}
+                            <div class="mt-5">
+                                <a href='#' class='btn btn-primary'>{{text}}</a>
+                            </div>
+                        {{/if}}
+                    </div>
+                {{/with}}
+            </div>
+        </section> 
+    </div>
+{{/each}}
