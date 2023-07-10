@@ -94,36 +94,6 @@
                         {{/each}}
                     {{/with}}
                 {{/with}}
-
-                <hr class="my-5">
-
-                {{>reviewItem}}
-
-
-                <section class="col-12 mb-4">
-                    <div class="row g-2">
-                        <div class="card h-100 text-bg-success">
-                            {{#with service}}
-                                <div class="card-body">
-                                    <h2 class="card-title text-center">{{title}}</h2>
-                                    <div class="text-center my-3">
-                                        <blockquote>{{description}}</blockquote>
-                                    </div>
-                                    
-                                    <div class='pb-2'>
-                                        <div class='nav flex-column'>
-                                            {{#each buttons}}
-                                                <div class='nav-item  text-center my-2'>
-                                                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                                                </div>
-                                            {{/each}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {{/with}}
-                        </div>
-                    </div>
-                </section>
             </div>
             
             <div class="col-4 pt-2 ps-3">
@@ -175,6 +145,35 @@
                 </div>
             </div>
         </div>
+
+        <hr class="my-5">
+
+                {{>reviewItem}}
+
+                <section class="col-12 mb-4">
+                    <div class="row g-2">
+                        <div class="card h-100 text-bg-success">
+                            {{#with service}}
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">{{title}}</h2>
+                                    <div class="text-center my-3">
+                                        <blockquote>{{description}}</blockquote>
+                                    </div>
+                                    
+                                    <div class='pb-2'>
+                                        <div class='nav flex-column'>
+                                            {{#each buttons}}
+                                                <div class='nav-item  text-center my-2'>
+                                                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                                                </div>
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/with}}
+                        </div>
+                    </div>
+                </section>
 
         <hr class="my-5">
 
