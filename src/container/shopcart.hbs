@@ -37,16 +37,15 @@
 
             {{#each buttons}}
                 {{#if isSuccess includeZero=true}}
-                        <div class="mt-3 mb-2">
-                            <a href='{{link}}' class='btn btn-success'>{{text}}</a>
-                        </div>
-                    {{else}}
-                    {{#if isOutline includeZero=true}}
-                        <div>
-                            <a href='{{link}}' class='btn btn-outline-success'>{{text}}</a>
-                        </div>
-                    {{/if}}
-                    {{/if}}
+                    <div class="mt-3 mb-2">
+                        <a href='{{link}}' class='btn btn-success'>{{text}}</a>
+                    </div>
+                {{/if}}
+                {{#if isOutline includeZero=true}}
+                    <div>
+                        <a href='{{link}}' class='btn btn-outline-success'>{{text}}</a>
+                    </div>
+                {{/if}}
             {{/each}}
         {{/with}}
 
@@ -66,10 +65,9 @@
                                             {{title}}
                                             {{#if isHot includeZero=true}}
                                                 <span class='badge text-bg-warning rounded-pill ms-2'>HOT!</span>
-                                            {{else}}
+                                            {{/if}}
                                             {{#if isNew includeZero=true}}
                                                 <span class='badge text-bg-primary rounded-pill ms-2'>Нове</span>
-                                            {{/if}}
                                             {{/if}}
                                         </h5>
                                         <p>
